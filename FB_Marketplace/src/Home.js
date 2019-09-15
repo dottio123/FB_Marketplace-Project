@@ -147,7 +147,7 @@ class Home extends Component {
           <div class="category">
             <img src={require('./assets/categories/homes.jpg')} alt="Homes"/>
             <div class="caption">
-              <div class="category_name"><h3></h3></div>
+              <div class="category_name"><h3>Homes</h3></div>
             </div>
           </div>
 

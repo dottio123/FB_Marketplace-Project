@@ -1,39 +1,352 @@
-body {
-    background-color: #FFCC00;
-    padding: 20px;
-    margin: 0;
-  }
-  h1, h2, p, ul, li {
-    font-family: sans-serif;
-  }
-  ul.header li {
-    display: inline;
-    list-style-type: none;
-    margin: 0;
-  }
-  ul.header {
-    background-color: #111;
-    padding: 0;
-  }
-  ul.header li a {
-    color: #FFF;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 20px;
-    display: inline-block;
-  }
-  .content {
-    background-color: #FFF;
-    padding: 20px;
-  }
-  .content h2 {
-    padding: 0;
-    margin: 0;
-  }
-  .content li {
-    margin-bottom: 10px;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+body 
+  {
+    background-color: #E9EBEE;
+    margin: 13% 0 0 0;
   }
 
-  .active {
-    background-color: #0099FF;
+  .placement
+  {
+    display: inline-flex;
+    flex-direction: row;
+  }
+
+  h2
+  {
+    font-family: 'Roboto';
+    font-weight: bolder;
+    left: 46px;
+    padding: 15px;
+    font-size: 20px;
+  }
+
+
+/* Main Menu Styles */
+
+  #navbar
+  {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 21.5%;
+    z-index: 999;
+    background-color: #006AFF;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.247);
+  }
+
+  h1, ul, li
+    {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+    }
+
+
+
+  ul.header li 
+    {
+      position: static;
+      color: #FFF;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 20px;
+      padding-right: 50px;
+      padding-left: 50px;
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+  ul.header 
+    {
+      background-color: #006AFF;
+      padding: 0;
+    }
+
+  ul.header li a 
+    {
+      position: static;
+      color: #FFF;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 20px;
+      padding-right: 25px;
+      padding-left: 25px;
+      display: inline-block;
+    }
+
+    li img
+    {
+      position: absolute;
+      top: 72%;
+      align-items: center;
+    }
+
+    #main_logo
+    {
+    top: 10%;
+    }
+
+  .content 
+    {
+      padding: 20px;
+    }
+
+  .content h2 
+    {
+      padding: 0;
+      margin: 0;
+    }
+
+  .content li
+    {
+      margin-bottom: 10px;
+    }
+
+  .active:not([img])
+    {
+      background-color: #0099FF;
+    }
+
+  #searchbar
+  {
+    position: absolute;
+    top: 13%;
+    right: 16%;
+    width: 1200px;
+    height: 45px;
+    padding: 6px;
+    border: 2px solid #DDDDDD;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+
+  #search_icon
+  {
+    position: absolute;
+    top: 17.5%;
+    right: 16.9%;
+    padding: .35%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 0 4px 4px 0;
+    background-color: #F4F5F6;
+  }
+
+  #location
+  {
+    position: absolute;
+    left: 11.2%;
+    top: 75.5%;
+  }
+
+  #profile
+  {
+    position: absolute;
+    top: 17%;
+    right:12%;
+  }
+
+  #username
+  {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 17%;
+    right: 8.5%;
+  }
+
+/* Homepage - Last Viewed */
+  #last_viewed
+  {
+    background-color: #6AA7E4;
+    width: min-content;
+    height: auto;
+    left: 46px;
+    top: 167px;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #last_viewed h4
+  {
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+  }
+
+  #last_viewed h2
+  {
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+  }
+
+
+/*Homepage - Top Picks */
+
+#top_picks
+{
+  left: 46px;
+  top: 167px;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/*Homepage - Top Categories */
+
+#top_categories
+{
+  left: 46px;
+  top: 167px;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/*Card Styling */
+  .card 
+  {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 200px;
+    height: 250px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 9px;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1.2px;
+    position: relative;
+  }
+
+  .card img
+  {
+    border-radius: 8px 8px 0px 0px;
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+  }
+
+  /* On mouse-over, add a deeper shadow */
+  .card:hover 
+  {
+    box-shadow: 0 8px 16px 0 rgba(0, 34, 184, 0.247);
+    transform: scale(1.1);
+  }
+
+  /* Add some padding inside the card container */
+  .caption h3
+  {
+    font-size: 15px;
+    justify-self: auto;
+    line-height: 0%;
+  }
+
+  .caption p
+  {
+    position: absolute;
+    bottom: 1%;
+    line-height: 0%;
+    font-size: 11.5px;
+    font-weight: normal;
+    color: rgb(112, 112, 112);
+    padding: 0px 10px ;
+  }
+
+  .title
+  {
+    position: absolute;
+    bottom: 4%;
+    padding: 6px 10px 9px;
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .price_tag
+  {
+    padding: 0px 7px;
+    font-style: bold;
+    position: absolute;
+    bottom: 55px;
+    left: 5px;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    align-content: center;
+    border-radius: 6px 6px 6px 6px;
+    height: 30px;
+    width: auto;
+  }
+
+/*Categories Page*/
+
+  #categories
+  {
+    overflow: scroll;
+  }
+
+
+/*Stores Page*/
+
+.list
+{
+  display: inline-flex;
+  flex-direction: row;
+  display: flex;
+  width: auto;
+  flex-wrap: wrap;
+  padding: auto;
+}
+
+
+
+/*Category Styling*/
+
+  .category
+  {
+    padding: 12px;
+  }
+
+
+  .category img
+  {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    border-color: gray;
+    border-style: solid;
+    border-width: 3px;
+  }
+
+  .category_name
+  {
+    color: black;
+    text-align: center;
+  }
+
+  .category_name h3
+  {
+    font-size: 18px;
+    font-weight: normal;
   }
